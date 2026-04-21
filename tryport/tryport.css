@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-red: #ff0000;
+    --card-blue: #b3e5fc; /* Approximate light blue from your mockup */
+    --text-dark: #111;
+    --text-light: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+header {
+    background-color: var(--primary-red);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    z-index: 100;
+}
+body {
+    /* Replace the URL below with your actual sandy background image */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #3e2723; /* Fallback color */
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+.page-title {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    flex: 1;
+}
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: opacity 0.3s;
+}
+nav a:hover {
+    opacity: 1;
+}
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.offset-card {
+    background-color: var(--card-blue);
+    border-radius: 50px;
+    padding: 100px;
+    box-shadow: 35px 35px 0px 0px var(--primary-red);
+    position: relative;
+}
+.offset-image {
+    width: 250px;
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 25px 25px 0px 0px var(--primary-red);
+}
+.split-layout {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    width: 100%;
+}
+.split-layout .image-col img {
+    width: 500px;
+    height: 600px;
+}
+.split-layout .text-col {
+    flex: 1;
+}
+.text-col h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.text-col h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.text-col h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.skills-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.skill-tabs {
+    display: flex;
+    gap: 20px;
+}
+
+.skill-tab {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.skill-tab:hover {
+  background: darkred;
+}
+
+.skills-grid img {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2); /* Slight dark shadow for icons */
+}
+
+
+
+
+
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+  padding: 50px;
+  justify-items: center; /* Aligns cards horizontally */
+}
+
