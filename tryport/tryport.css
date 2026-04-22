@@ -2,7 +2,7 @@
 
 :root {
     --primary-red: #ff0000;
-    --card-blue: #b3e5fc; /* Approximate light blue from your mockup */
+    --card-blue: #b3e5fc;
     --text-dark: #111;
     --text-light: #fff;
 }
@@ -23,12 +23,12 @@ header {
     z-index: 100;
 }
 body {
-    /* Replace the URL below with your actual sandy background image */
+ 
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("bg.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #3e2723; /* Fallback color */
+    background-color: #3e2723;
     min-height: 100vh;
     color: var(--text-dark);
 }
@@ -139,13 +139,8 @@ main {
     height: 100px;
     background-color: white;
     padding: 15px;
-    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2); /* Slight dark shadow for icons */
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2); 
 }
-
-
-
-
-
 
 
 .skills-grid {
@@ -153,6 +148,78 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 30px;
   padding: 50px;
-  justify-items: center; /* Aligns cards horizontally */
+  justify-items: center;
 }
 
+.skills-grid img {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
+    
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.skills-grid img:hover {
+   
+    transform: scale(1.1); 
+    
+    
+    box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.3);
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;    
+    justify-content: center; 
+    gap: 40px;               
+    min-height: 80vh;        
+}
+
+.slider-viewport {
+    width: 960px;            
+    overflow: hidden;        
+    border-radius: 8px;     
+}
+
+.slider-track {
+    display: flex;
+    gap: 30px;               
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card {
+    width: 300px;
+    flex-shrink: 0;         
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+
+.arrow {
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transition: scale 0.2s;
+    user-select: none;
+}
+
+.arrow:hover {
+    scale: 1.2;
+    color: #ff0000;
+}
+
+#btn-2:checked ~ .carousel-wrapper .slider-track {
+    transform: translateX(-990px); 
+}
+
+#btn-1:checked ~ .carousel-wrapper .slider-track {
+    transform: translateX(0);
+}
